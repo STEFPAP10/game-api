@@ -26,3 +26,4 @@ C:\Users\stefp\Desktop\GAME\WebApplication1\obj\Debug\net10.0\refint\WebApplicat
 C:\Users\stefp\Desktop\GAME\WebApplication1\obj\Debug\net10.0\WebApplication1.pdb
 C:\Users\stefp\Desktop\GAME\WebApplication1\obj\Debug\net10.0\WebApplication1.genruntimeconfig.cache
 C:\Users\stefp\Desktop\GAME\WebApplication1\obj\Debug\net10.0\ref\WebApplication1.dll
+c:\Users\stefp\Desktop\GAME\WebApplication1\obj\Debug\net10.0\WebApplication1.sourcelink.json

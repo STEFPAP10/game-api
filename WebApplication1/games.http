@@ -1,4 +1,4 @@
-GET http://localhost:5297/games/1
+GET http://localhost:5297/games/
 
 ###
 
@@ -13,7 +13,7 @@ Content-Type: application/json
 }
 
 ###
-PUT http://localhost:5297/games/1
+PUT http://localhost:5297/games/4
 Content-Type: application/json
 
 {
@@ -22,3 +22,6 @@ Content-Type: application/json
     "price": 19.99,
     "releaseDate": "2011-12-12" 
 }
+
+###
+DELETE http://localhost:5297/games/1
