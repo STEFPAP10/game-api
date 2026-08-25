@@ -1,0 +1,24 @@
+GET http://localhost:5297/games/1
+
+###
+
+POST http://localhost:5297/games 
+Content-Type: application/json
+
+{
+    "name": "Gta V",
+    "genre": "Action-adventure",
+    "price": 59.99,
+    "releaseDate": "2017-03-03" 
+}
+
+###
+PUT http://localhost:5297/games/1
+Content-Type: application/json
+
+{
+    "name": "Pro Evolution Soccer 2012",
+    "genre": "Sports",
+    "price": 19.99,
+    "releaseDate": "2011-12-12" 
+}
