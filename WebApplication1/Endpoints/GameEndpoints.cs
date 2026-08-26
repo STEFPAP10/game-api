@@ -44,17 +44,18 @@ public static class GameEndpoints
 
             // POST /games
             group.MapPost("/",(CreateGameDto newGame) =>
-            
             {
+                 
                 GameDto game = new(
                     games.Count > 0 ? games.Max(g => g.Id) + 1 : 1,
                     newGame.Name,
                     newGame.Genre,
-                    newGame.Price,
-                    newGame.ReleaseDate);
+                    newGame.Price!.Value,
+                    newGame.ReleaseDate!.Value);
                     games.Add(game);
                     return Results.CreatedAtRoute("GetName", new { id = game.Id }, game);
-            });
+            })
+            .WithParameterValidation();
    
             // PUT /games/
             group.MapPut("/{id}",(int id, UpdateGameDto updatedGame) =>

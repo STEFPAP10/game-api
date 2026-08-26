@@ -27,3 +27,9 @@ C:\Users\stefp\Desktop\GAME\WebApplication1\obj\Debug\net10.0\WebApplication1.pd
 C:\Users\stefp\Desktop\GAME\WebApplication1\obj\Debug\net10.0\WebApplication1.genruntimeconfig.cache
 C:\Users\stefp\Desktop\GAME\WebApplication1\obj\Debug\net10.0\ref\WebApplication1.dll
 c:\Users\stefp\Desktop\GAME\WebApplication1\obj\Debug\net10.0\WebApplication1.sourcelink.json
+c:\Users\stefp\Desktop\GAME\WebApplication1\bin\Debug\net10.0\Microsoft.OpenApi.dll
+c:\Users\stefp\Desktop\GAME\WebApplication1\bin\Debug\net10.0\MinimalApis.Extensions.dll
+c:\Users\stefp\Desktop\GAME\WebApplication1\bin\Debug\net10.0\MiniValidation.dll
+c:\Users\stefp\Desktop\GAME\WebApplication1\obj\Debug\net10.0\WebApplication1.csproj.AssemblyReference.cache
+c:\Users\stefp\Desktop\GAME\WebApplication1\obj\Debug\net10.0\WebApplication1.MvcApplicationPartsAssemblyInfo.cs
+c:\Users\stefp\Desktop\GAME\WebApplication1\obj\Debug\net10.0\WebAppli.7D14BD69.Up2Date
