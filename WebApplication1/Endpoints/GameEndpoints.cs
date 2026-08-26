@@ -69,8 +69,8 @@ public static class GameEndpoints
                     id,
                     updatedGame.Name,
                     updatedGame.Genre,
-                    updatedGame.Price,
-                    updatedGame.ReleaseDate);
+                    updatedGame.Price!.Value,
+                    updatedGame.ReleaseDate!.Value);
                 games[index] = game;
                 return Results.Ok(game);
             });
