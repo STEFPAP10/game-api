@@ -6,22 +6,22 @@ POST http://localhost:5297/games
 Content-Type: application/json
 
 {
-    "name": "Gta V",
+    "name": "Gta VI",
     "genre": "Action-adventure",
-    "price": 59.99,
-    "releaseDate": "2017-03-03" 
+    "price": 159.99,
+    "releaseDate": "2026-03-03" 
 }
 
 ###
-PUT http://localhost:5297/games/4
+PUT http://localhost:5297/games/1
 Content-Type: application/json
 
 {
-    "name": "Pro Evolution Soccer 2012",
+    "name": "Pro Evolution Soccer 2013",
     "genre": "Sports",
-    "price": 19.99,
-    "releaseDate": "2011-12-12" 
+    "price": 29.99,
+    "releaseDate": "2012-12-12" 
 }
 
 ###
-DELETE http://localhost:5297/games/1
+DELETE http://localhost:5297/games/3
