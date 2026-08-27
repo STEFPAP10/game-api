@@ -1,0 +1,14 @@
+# .NET Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Databases
+*.db
+*.db-shm
+*.db-wal
+
+# VS Code / Visual Studio
+.vs/
+.vscode/
