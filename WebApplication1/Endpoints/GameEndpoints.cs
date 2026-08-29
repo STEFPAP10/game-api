@@ -1,4 +1,6 @@
+using WebApplication1.Data;
 using WebApplication1.Dtos;
+using WebApplication1.Entities;
 namespace WebApplication1.Endpoints;
 
 
@@ -44,16 +46,17 @@ public static class GameEndpoints
             }).WithName("GetName"); 
 
             // POST /games
-            group.MapPost("/",(CreateGameDto newGame) =>
+            group.MapPost("/",(CreateGameDto newGame, GameStoreContext dbContext) =>
             {
-                 
-                GameDto game = new(
-                    games.Count > 0 ? games.Max(g => g.Id) + 1 : 1,
-                    newGame.Name,
-                    newGame.Genre,
-                    newGame.Price!.Value,
-                    newGame.ReleaseDate!.Value);
-                    games.Add(game);
+                    Game game = new()
+                    {    Name = newGame.Name,
+                         Genre = dbContext.Genres.Find(newGame.GenreId),
+                         GenreId = newGame.GenreId,
+                         Price = newGame.Price!.Value,
+                         ReleaseDate = newGame.ReleaseDate!.Value
+                    };
+                    dbContext.Games.Add(game);
+                    dbContext.SaveChanges();
                     return Results.CreatedAtRoute("GetName", new { id = game.Id }, game);
             });
             

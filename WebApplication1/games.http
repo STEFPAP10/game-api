@@ -6,10 +6,10 @@ POST http://localhost:5297/games
 Content-Type: application/json
 
 {
-    "name": "Gta VI",
-    "genre": "Action-adventure",
-    "price": 0,
-    "releaseDate": "2026-03-03" 
+    "name": "Pro Evolution Soccer 2012",
+    "genreId": 1,
+    "price": 59.99,
+    "releaseDate": "2011-03-03" 
 }
 
 ###
@@ -18,7 +18,7 @@ Content-Type: application/json
 
 {
     "name": "Pro Evolution Soccer 2013",
-    "genre": "Sports",
+    "genreId": 1,
     "price": 29.99,
     "releaseDate": "2012-12-12" 
 }
