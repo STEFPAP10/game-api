@@ -1,4 +1,4 @@
-GET http://localhost:5297/games/1
+GET http://localhost:5297/games/
 
 ###
 
@@ -6,7 +6,7 @@ POST http://localhost:5297/games
 Content-Type: application/json
 
 {
-    "name": "Pro Evolution Soccer 2012",
+    "name": "Pro Evolution Soccer 2014",
     "genreId": 1,
     "price": 59.99,
     "releaseDate": "2011-03-03" 
