@@ -1,4 +1,4 @@
-GET http://localhost:5297/games/
+GET http://localhost:5297/games/8
 
 ###
 
@@ -6,7 +6,7 @@ POST http://localhost:5297/games
 Content-Type: application/json
 
 {
-    "name": "Pro Evolution Soccer 2014",
+    "name": "god of war II",
     "genreId": 1,
     "price": 59.99,
     "releaseDate": "2011-03-03" 

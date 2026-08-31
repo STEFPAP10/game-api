@@ -7,7 +7,7 @@ namespace WebApplication1.Endpoints;
 
 public static class GameEndpoints 
 {
-    private static readonly List<GameDto> games = [
+    private static readonly List<GameSummaryDto> games = [
         new(
             1,
             "Fifa 23",
@@ -36,14 +36,11 @@ public static class GameEndpoints
            group.MapGet("/",()=>games);        
 
            // GET /games/{id}
-           group.MapGet("/{id}", (int id) =>
+           group.MapGet("/{id}", (int id, GameStoreContext dbContext) =>
             {
-                    var game = games.FirstOrDefault(g => g.Id == id);
-                    if (game is null)
-                    {
-                         return Results.NotFound();
-                    }
-                        return Results.Ok(game);
+                   Game? game = dbContext.Games.Find(id);
+
+                   return game is not null ? Results.Ok(game.ToGameDetailsDto()) : Results.NotFound();
             }).WithName("GetName"); 
 
             // POST /games
@@ -51,14 +48,14 @@ public static class GameEndpoints
             {
 
                     Game  game = newGame.ToEntity();
-                    game.Genre = dbContext.Genres.Find(newGame.GenreId);
+                    
 
                     
                     dbContext.Games.Add(game);
                     dbContext.SaveChanges();
  
 
-                    return Results.CreatedAtRoute("GetName", new { id = game.Id },game.ToDto());
+                    return Results.CreatedAtRoute("GetName", new { id = game.Id },game.ToGameDetailsDto());
             });
             
             // PUT /games/
@@ -69,7 +66,7 @@ public static class GameEndpoints
                {
                     return Results.NotFound();
                }
-               GameDto game = new(
+               GameSummaryDto game = new(
                     id,
                     updatedGame.Name,
                     updatedGame.Genre,
